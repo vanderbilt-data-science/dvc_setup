@@ -34,3 +34,9 @@ Now, let's store the data remotely. For the purposes of this tutorial, we will s
   * ```dvc push```
   * ```git push origin <branch>```
 
+To pull data in if cloning a repository with dvc already set up, follow the steps below:
+
+1. In command line, change directory to the repository, then run the following command ```dvc pull```
+2. You will be asked to copy a link. This will take you to an authentication page. Log in with the google account associated with the data directory you have access to and give all permissions. 
+3. Paste the code provided after authentication into the command line
+4. You now have the data downloaded locally in the data folder. 
