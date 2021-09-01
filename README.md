@@ -21,7 +21,7 @@ This repository acts as a tutorial for using data versioning and storage with dv
 
 Now, let's store the data remotely. For the purposes of this tutorial, we will set up the remote data storage with google drive. 
 
-11. Create a folder on Google Drive where the data will be stored. Copy the unique URL code to this folder. The URL will look something like https://drive.google.com/drive/folders/1ynNBbT-4J0ida0eKYQqZZbC93juUUbVH. Copy only the code at the end of the URL. 
+11. Create a folder on Google Drive where the data will be stored. Copy the unique URL code to this folder. The URL will look something like ```https://drive.google.com/drive/folders/1ynNBbT-4J0ida0eKYQqZZbC93juUUbVH```. Copy only the code at the end of the URL. 
 12. Simply add that link to DVC to store the location of the remote storage. Run the following code in the command line: ```dvc remote add -d remote gdrive://1ynNBbT-4J0ida0eKYQqZZbC93juUUbVH```
 13. Now simply commit the config file: ```git commit .dvc/config -m "Configure remote storage"```
 14. Now push the file to github: ```dvc push```
