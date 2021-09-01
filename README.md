@@ -5,6 +5,7 @@ This repository acts as a tutorial for using data versioning and storage with dv
 # Installation Steps
 
 1. Install dvc locally. There are multiple ways to install dvc: 
+ 
  On MacOS:
   * Install with Homebrew (Recommended): run the following code in the command line: ```brew install dvc```
   * Install with pip: run the following code in the command line: ```pip install "dvc[s3/gdrive/azure/gs/etc.]"```
