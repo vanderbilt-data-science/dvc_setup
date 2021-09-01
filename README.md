@@ -15,5 +15,21 @@ This repository acts as a tutorial for using data versioning and storage with dv
 5. Run the following command: ```git commit -m "Initialize DVC"```
 6. Add the data to a folder named "data" in the locally cloned repository
 7. To track the data directory, run the following command: ```dvc add data```
-   The information of the added file or directory will be stored in .dvc file nameddata.dvc . This is a small text file that stores information on how to access the original data but not the original data itself.
-9. 
+   The information of the added file or directory will be stored in a .dvc file named data.dvc . This is a small text file that stores information on how to access the original data but not the original data itself.
+9. Make sure to add data to .gitignore beforehand to avoid committing the data. Add the line "data/" to the .gitignore file in the repository. 
+10. Now simply commit the dvc file as you would with source code using the following two commands: ```git add data.dvc```, ```git commit -m "add data"```
+
+Now, let's store the data remotely. For the purposes of this tutorial, we will set up the remote data storage with google drive. 
+
+11. Create a folder on Google Drive where the data will be stored. Copy the unique URL code to this folder. The URL will look something like https://drive.google.com/drive/folders/1ynNBbT-4J0ida0eKYQqZZbC93juUUbVH. Copy only the code at the end of the URL. 
+12. Simply add that link to DVC to store the location of the remote storage. Run the following code in the command line: ```dvc remote add -d remote gdrive://1ynNBbT-4J0ida0eKYQqZZbC93juUUbVH```
+13. Now simply commit the config file: ```git commit .dvc/config -m "Configure remote storage"```
+14. Now push the file to github: ```dvc push```
+15. That’s it! Now all of the data is pushed to Google Drive. Now push the changes to the remote repository: ```git push origin <branch>```
+16. To retrieve the data, simply type ```dvc pull```
+17. To make changes, use the following commands: 
+  * ```dvc add data```
+  * ```git commit data.dvc -m 'Data updates'```
+  * ```dvc push```
+  * ```git push origin <branch>```
+
