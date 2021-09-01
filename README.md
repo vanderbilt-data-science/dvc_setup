@@ -29,6 +29,7 @@ Now, let's store the data remotely. For the purposes of this tutorial, we will s
 16. To retrieve the data, simply type ```dvc pull```
 17. To make changes, use the following commands: 
   * ```dvc add data```
+  * ```git add data.dvc```
   * ```git commit data.dvc -m 'Data updates'```
   * ```dvc push```
   * ```git push origin <branch>```
