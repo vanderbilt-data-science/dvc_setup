@@ -8,7 +8,7 @@ This repository acts as a tutorial for using data versioning and storage with dv
  
   * Install with Homebrew (Recommended for MacOS): run the following code in the command line: ```brew install dvc```
   * Install with pip: run the following code in the command line: ```pip install "dvc[s3/gdrive/azure/gs/etc.]"```
-  * Install with Conda: run the following two lines of code in the command line: ```conda install -c conda-forge mamba```, ```mamba install -c conda-forge dvc-s3/gdrive/azure/gs/etc.```
+  * Install with Conda: run the following two lines of code in the command line: ```conda install -c conda-forge mamba; mamba install -c conda-forge dvc-s3/gdrive/azure/gs/etc.```
 
 2. Create the project git repository and clone it locally
 3. In the command line, change directory (```cd```) to the git repository and run the following command: ```dvc init```
